@@ -14,15 +14,15 @@ public class Main {
         int key1 = 8;
         int key2 = 21;
         String encrypted = ceaseAlgo.encrypt(message, key1);
-        System.out.println("[x]encrypted : " + encrypted);
+        System.out.println("[x]Encrypted : " + encrypted);
         String decrypted = ceaseAlgo.encrypt(encrypted, 26 - key1);
-        System.out.println("[x]decrypted : " + decrypted);
+        System.out.println("[x]Decrypted : " + decrypted);
         System.out.println();
         System.out.println("-------------------------------------------------CEASER ALGORITHM PROGRAM WITH 2 KEY----------" +
                 "-----------------------------------------------------------");
         encrypted = ceaseAlgo.encryptTwoKeys(message,key1,key2);
-        System.out.println("[x]encrypted : " + encrypted);
+        System.out.println("[x]Encrypted : " + encrypted);
         decrypted = ceaseAlgo.encryptTwoKeys(encrypted, 26 - key1,26-key2);
-        System.out.println("[x]decrypted : " + decrypted);
+        System.out.println("[x]Decrypted : " + decrypted);
     }
 }
