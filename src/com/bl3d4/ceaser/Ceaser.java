@@ -1,11 +1,12 @@
 package com.bl3d4.ceaser;
 
+
 public class Ceaser {
     public String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public String encrypt(String input, int key) {
 
-        StringBuilder encrypted = new StringBuilder(input);
+        StringBuilder encrypted = new StringBuilder(input.toUpperCase());
         String shiftedAlphabet = alphabet.substring(key) + alphabet.substring(0, key);
 
         for (int i = 0; i < encrypted.length(); i++) {
@@ -16,10 +17,10 @@ public class Ceaser {
                 encrypted.setCharAt(i, newChar);
             }
         }
-        return encrypted.toString();
+        return encrypted.toString().toLowerCase();
     }
 
-     String encryptTwoKeys(String input, int key1, int key2) {
+    String encryptTwoKeys(String input, int key1, int key2) {
         String encryptedKey1 = encrypt(input, key1);
         String encryptedKey2 = encrypt(input, key2);
         StringBuilder finalEncrypted = new StringBuilder(input);
@@ -39,5 +40,17 @@ public class Ceaser {
         }
 
         return finalEncrypted.toString();
+    }
+
+    String decrypted(String encrypted)
+    {
+        Ceaser ceaser = new Ceaser();
+        for (int i=1;i<+alphabet.length();i++)
+        {
+            String s = ceaser.encrypt(encrypted,alphabet.length()-i);
+            System.out.println(i+"\t"+s);
+
+        }
+        return "success";
     }
 }
