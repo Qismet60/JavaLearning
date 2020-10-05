@@ -49,8 +49,12 @@ public class Ceaser {
         {
             String s = ceaser.encrypt(encrypted,alphabet.length()-i);
             System.out.println(i+"\t"+s);
-
         }
         return "success";
+    }
+    String decryptedWithTwoKeys(String encrypted,int key1,int key2)
+    {
+        Ceaser ceaser = new Ceaser();
+        return ceaser.encryptTwoKeys(encrypted,26-key1,26-key1);
     }
 }

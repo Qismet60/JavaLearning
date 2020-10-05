@@ -41,7 +41,7 @@ public class CeasarBreaker {
         return result;
     }
 
-    //decrypted
+
 
     public int getKey(String s) {
         int[] freqs = CountLetters(s);
@@ -52,8 +52,9 @@ public class CeasarBreaker {
         }
         return decryptKey;
     }
+    //decrypted
 
-    public String decrypted(String encrypted, int key) {
+    public String decryptedWithKey(String encrypted, int key) {
         Ceaser ceaser = new Ceaser();
         return ceaser.encrypt(encrypted, 26 - key);
     }

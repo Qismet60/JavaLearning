@@ -15,7 +15,7 @@ public class Write {
             FileWriter fileWriter = new FileWriter(file.getName());
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             int len;
-            System.out.print("How many Sentence/Line you Want to Enter ? ");
+            System.out.print("How many Line you Want to Enter ? ");
             len = scanner.nextInt();
             String sentence;
             System.out.println("Enter " + len + " Lines of Sentences followed by Enter : ");
